@@ -9,7 +9,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 def load_model():
     model_name = "microsoft/phi-3-mini-4k-instruct"
 
-    quant = BitsAndBytesConfig(load_in_4bit=True)
+    #quant = BitsAndBytesConfig(load_in_4bit=True)
 
     tokenizer = AutoTokenizer.from_pretrained(model_name,  trust_remote_code=True)
     if tokenizer.pad_token is None:
@@ -18,7 +18,7 @@ def load_model():
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="cpu",
-        quantization_config=quant,
+        #quantization_config=quant,
         torch_dtype=torch.float32,
         low_cpu_mem_usage=True,
          trust_remote_code=True 
