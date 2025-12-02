@@ -11,7 +11,7 @@ def load_model():
 
     quant = BitsAndBytesConfig(load_in_4bit=True)
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name,  trust_remote_code=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
@@ -20,7 +20,8 @@ def load_model():
         device_map="cpu",
         quantization_config=quant,
         torch_dtype=torch.float32,
-        low_cpu_mem_usage=True
+        low_cpu_mem_usage=True,
+         trust_remote_code=True 
     )
 
     return tokenizer, model
