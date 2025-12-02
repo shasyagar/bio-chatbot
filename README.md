@@ -21,17 +21,6 @@ It is strictly for **research and educational use.**
 
 ---
 
-## 🚀 Live Demo
-
-Once deployed on Streamlit Cloud, your app will be live at a URL like:
-
-https://your-app-name.streamlit.app
-
-
-(Replace above after deployment.)
-
----
-
 ## 🛠️ Features
 
 ✔ Fast chat-style interface  
@@ -57,8 +46,11 @@ https://your-app-name.streamlit.app
 
 bioinformatics-chatbot/
 │
+
 ├── app.py # Main Streamlit application
+
 ├── requirements.txt # Python dependencies
+
 └── README.md # Documentation
 
 
