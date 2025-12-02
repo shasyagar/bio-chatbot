@@ -1,0 +1,6 @@
+streamlit
+transformers==4.39.0
+accelerate
+bitsandbytes
+torch
+pandas
